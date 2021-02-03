@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ddsViewer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="DDS/;GUI/" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ddsViewer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="test.dds" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Environment>
+				<Variable name="wxdir" value="C:\Libraries\wx" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu++17" />
+			<Add directory="$(wxdir)/include" />
+			<Add directory="$(wxdir)/lib/gcc810_x64_dll/mswu" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(wxdir)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="libwxbase31u.a" />
+			<Add library="libwxmsw31u_core.a" />
+			<Add directory="$(wxdir)/lib/gcc810_x64_dll" />
+		</Linker>
+		<Unit filename="DDS/ddsLoader.cpp">
+			<Option virtualFolder="DDS/" />
+		</Unit>
+		<Unit filename="DDS/ddsLoader.h">
+			<Option virtualFolder="DDS/" />
+		</Unit>
+		<Unit filename="DDS/dds_defs.h">
+			<Option virtualFolder="DDS/" />
+		</Unit>
+		<Unit filename="DDS/dxt_decompress.cpp">
+			<Option virtualFolder="DDS/" />
+		</Unit>
+		<Unit filename="DDS/dxt_decompress.h">
+			<Option virtualFolder="DDS/" />
+		</Unit>
+		<Unit filename="GUI/ImageHandlerDDS.cpp">
+			<Option virtualFolder="GUI/" />
+		</Unit>
+		<Unit filename="GUI/ImageHandlerDDS.h">
+			<Option virtualFolder="GUI/" />
+		</Unit>
+		<Unit filename="GUI/ddsGUI.cpp">
+			<Option virtualFolder="GUI/" />
+		</Unit>
+		<Unit filename="GUI/ddsGUI.h">
+			<Option virtualFolder="GUI/" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
